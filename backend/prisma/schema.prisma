@@ -1,4 +1,3 @@
-// backend/prisma/schema.prisma
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,30 +7,42 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum DroneStatus {
+  DISPONIVEL
+  EM_VOO
+  MANUTENCAO
+}
+
 model Drone {
-  id         Int       @id @default(autoincrement())
+  id         Int         @id @default(autoincrement())
   nome       String
   capacidade Int
-  status     String
+  status     DroneStatus @default(DISPONIVEL)
   entregas   Entrega[]
 }
 
 model Pedido {
-  id         Int       @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   destino    String
   peso       Float
   prioridade Int
-  entregue   Boolean   @default(false)
+  entregue   Boolean  @default(false)
   entrega    Entrega?
 }
 
 model Entrega {
-  id        Int       @id @default(autoincrement())
-  droneId   Int
-  pedidoId  Int       @unique
-  inicio    DateTime  @default(now())
-  fim       DateTime?
+  id       Int       @id @default(autoincrement())
+  droneId  Int
+  pedidoId Int       @unique
+  inicio   DateTime  @default(now())
+  fim      DateTime?
 
-  drone     Drone     @relation(fields: [droneId], references: [id])
-  pedido    Pedido    @relation(fields: [pedidoId], references: [id])
+  drone  Drone  @relation(fields: [droneId], references: [id])
+  pedido Pedido @relation(fields: [pedidoId], references: [id])
+}
+
+model Obstaculo {
+  id Int @id @default(autoincrement())
+  x  Int
+  y  Int
 }
