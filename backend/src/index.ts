@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
-import pedidoRoutes from "./routes/pedidoRoutes";
+import pedidosRouter from './routes/pedidos.routes';
+import { prisma } from "./lib/prisma"; 
 
 const app = express();
 const PORT = 3333;
@@ -8,8 +9,8 @@ const PORT = 3333;
 app.use(cors());
 app.use(express.json());
 
-// Rotas
-app.use("/pedidos", pedidoRoutes);
+
+app.use("/pedidos", pedidosRouter);
 
 app.get("/", (req, res) => {
   res.send("API Drone Delivery rodando 🚁");

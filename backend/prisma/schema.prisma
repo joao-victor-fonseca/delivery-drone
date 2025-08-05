@@ -22,23 +22,23 @@ model Drone {
 }
 
 model Pedido {
-  id         Int      @id @default(autoincrement())
+  id         Int       @id @default(autoincrement())
   destino    String
   peso       Float
   prioridade Int
-  entregue   Boolean  @default(false)
+  entregue   Boolean   @default(false)
   entrega    Entrega?
 }
 
 model Entrega {
-  id       Int       @id @default(autoincrement())
-  droneId  Int
-  pedidoId Int       @unique
-  inicio   DateTime  @default(now())
-  fim      DateTime?
+  id        Int      @id @default(autoincrement())
+  droneId   Int
+  pedidoId  Int      @unique
+  inicio    DateTime @default(now())
+  fim       DateTime?
 
-  drone  Drone  @relation(fields: [droneId], references: [id])
-  pedido Pedido @relation(fields: [pedidoId], references: [id])
+  drone     Drone    @relation(fields: [droneId], references: [id])
+  pedido    Pedido   @relation(fields: [pedidoId], references: [id])
 }
 
 model Obstaculo {
