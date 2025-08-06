@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Home } from "./pages/home";
+import { CriarPedido } from "./pages/CriarPedido";
+import { Entregas } from "./pages/Entregas";
+import { Drones } from "./pages/Drones";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className="min-h-screen bg-background text-foreground flex">
+        <aside className="w-64 bg-muted p-6 space-y-6 shadow-md">
+          <h2 className="text-2xl font-bold">🚁 Drone Delivery</h2>
+          <nav className="flex flex-col gap-4 text-lg font-medium">
+            <Link to="/">🏠 Dashboard</Link>
+            <Link to="/pedido">➕ Criar Pedido</Link>
+            <Link to="/entregas">📦 Entregas</Link>
+            <Link to="/drones">🚁 Drones</Link>
+          </nav>
+        </aside>
+        <main className="flex-1 p-6">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/pedido" element={<CriarPedido />} />
+            <Route path="/entregas" element={<Entregas />} />
+            <Route path="/drones" element={<Drones />} />
+          </Routes>
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </Router>
+  );
 }
-
-export default App
