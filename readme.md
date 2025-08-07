@@ -85,6 +85,27 @@ npm install
 npm run dev
 ```
 
+---
+
+### 🧪 Testes
+
+Os testes foram escritos utilizando **Jest** e cobrem os principais fluxos do backend, especialmente os controllers e serviços.
+
+### Rodar os testes do backend
+
+```bash
+cd backend
+npm run test
+
+```
+
+Os testes cobrem os principais fluxos e regras de negócio do sistema, incluindo:
+
+- 🚫 Validação de entradas inválidas e tratamento de erros
+- ✅ Criação de pedidos e alocação correta a drones disponíveis
+- 📦 Respostas esperadas para o status de pedidos (aguardando, em voo, etc.)
+- 🗺 Geração do mapa ASCII com drones posicionados, obstáculos e pedidos pendentes
+
 <h2>🌐 Minhas Redes Sociais</h2>
 
 <p>
