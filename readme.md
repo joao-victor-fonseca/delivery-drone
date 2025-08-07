@@ -1,6 +1,6 @@
-<p align="center">
-  <img src="./public/ilustracao.gif" alt="Ilustração Drone Delivery" />
-</p>
+<h1 align="center" style="color:#4ade80; font-weight: 700; margin-bottom: 0.5rem;">
+  🚁 Bem-vindo ao Drone Delivery 🚀
+</h1>
 
 <p align="center">
   Este repositório contém o código-fonte do sistema <strong>Drone Delivery</strong>, que gerencia entregas por drones em áreas urbanas, com controle de pedidos, drones e simulação de voos.
