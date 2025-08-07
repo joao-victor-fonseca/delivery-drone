@@ -6,6 +6,17 @@
   Este repositório contém o código-fonte do sistema <strong>Drone Delivery</strong>, que gerencia entregas por drones em áreas urbanas, com controle de pedidos, drones e simulação de voos.
 </p>
 
+## 🎥 Demonstração do projeto
+
+[Veja o vídeo de demonstração no Loom](https://www.loom.com/share/ec1100db9d2e4d5ba7414136e32b4d86)
+
+---
+
+## 🚀 Acesse o projeto em produção
+
+🔗 [Simulador de Entregas por Drones](https://delivery-drone-ypx1.vercel.app/)
+
+
 ---
 
 ## 💻 Tecnologias
@@ -43,11 +54,8 @@ Isso ajudou a manter o foco, garantir que todas as entregas fossem concluídas e
 - 🟪 **Etapa 6 – Finalização e Deploy**  
   Deploy backend e frontend, documentação e extras.
 
-<<<<<<< HEAD
-🔗 **Quadro no Trello**: [Acessar aqui](https://trello.com/invite/b/6890dab140fba5d0965b9e0c/ATTIb57385b4fbc9f433969f6d2a047f1da10D84E023/projeto-drone)
-=======
+
 🔗 **Quadro no Trello**: [Acessar aqui](https://trello.com/b/3C1t3vv8/projeto-drone)
->>>>>>> eb03b0176af8c517076d786a9e38426b83f5d6ab
 
 ---
 
