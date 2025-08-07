@@ -1,6 +1,6 @@
-<p align="center">
-  <img src="./public/ilustracao.gif" alt="Ilustração Drone Delivery" />
-</p>
+<h1 align="center" style="color:#4ade80; font-weight: 700; margin-bottom: 0.5rem;">
+  🚁 Bem-vindo ao Drone Delivery 🚀
+</h1>
 
 <p align="center">
   Este repositório contém o código-fonte do sistema <strong>Drone Delivery</strong>, que gerencia entregas por drones em áreas urbanas, com controle de pedidos, drones e simulação de voos.
@@ -43,7 +43,11 @@ Isso ajudou a manter o foco, garantir que todas as entregas fossem concluídas e
 - 🟪 **Etapa 6 – Finalização e Deploy**  
   Deploy backend e frontend, documentação e extras.
 
+<<<<<<< HEAD
 🔗 **Quadro no Trello**: [Acessar aqui](https://trello.com/invite/b/6890dab140fba5d0965b9e0c/ATTIb57385b4fbc9f433969f6d2a047f1da10D84E023/projeto-drone)
+=======
+🔗 **Quadro no Trello**: [Acessar aqui](https://trello.com/b/3C1t3vv8/projeto-drone)
+>>>>>>> eb03b0176af8c517076d786a9e38426b83f5d6ab
 
 ---
 
