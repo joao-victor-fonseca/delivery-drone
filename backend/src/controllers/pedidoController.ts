@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import { prisma } from '../lib/prisma';
-
 import { alocarPedido } from '../services/alocacaoService';
 
 export const criarPedido = async (req: Request, res: Response) => {
@@ -21,5 +20,27 @@ export const criarPedido = async (req: Request, res: Response) => {
   } catch (error: any) {
     console.error('Erro:', error.message);
     return res.status(400).json({ erro: error.message });
+  }
+};
+
+export const statusPedido = async (req: Request, res: Response) => {
+  try {
+    const pedido = await prisma.pedido.findUnique({
+      where: { id: Number(req.params.id) },
+      include: { entrega: { include: { drone: true } } },
+    });
+
+    if (!pedido) {
+      return res.status(404).json({ erro: 'Pedido não encontrado' });
+    }
+
+    if (!pedido.entrega) {
+      return res.json({ status: 'AGUARDANDO' });
+    }
+
+    return res.json({ status: pedido.entrega.drone.status });
+  } catch (error: any) {
+    console.error('Erro ao buscar status:', error.message);
+    return res.status(500).json({ erro: 'Erro ao buscar status' });
   }
 };

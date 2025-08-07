@@ -27,8 +27,8 @@ model Drone {
 
 model Pedido {
   id         Int      @id @default(autoincrement())
-  x          Int // Coordenada X do cliente
-  y          Int // Coordenada Y do cliente
+  x          Int
+  y          Int
   peso       Float
   prioridade Int
   entregue   Boolean  @default(false)
