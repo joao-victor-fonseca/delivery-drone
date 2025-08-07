@@ -4,7 +4,7 @@ import { DroneStatus } from '../utils/enums';
 const BASE_X = 0;
 const BASE_Y = 0;
 
-function calcularDistancia(x1: number, y1: number, x2: number, y2: number): number {
+export function calcularDistancia(x1: number, y1: number, x2: number, y2: number): number {
   return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
 }
 
