@@ -2,17 +2,13 @@
   <img src="./public/ilustracao.gif" alt="Ilustração Drone Delivery" />
 </p>
 
-###
-
 <p align="center">
-  Este repositório contém o código-fonte do sistema Drone Delivery, que gerencia entregas por drones em áreas urbanas, com controle de pedidos, drones e simulação de voos.
+  Este repositório contém o código-fonte do sistema <strong>Drone Delivery</strong>, que gerencia entregas por drones em áreas urbanas, com controle de pedidos, drones e simulação de voos.
 </p>
 
-###
+---
 
-<h2 align="left" style="color:white;">💻 Tecnologias</h2>
-
-###
+## 💻 Tecnologias
 
 <div align="left">
   <a href="#">
@@ -20,48 +16,70 @@
   </a>
 </div>
 
-###
+---
 
-<h2 align="left" style="color:white;">🌐 Minhas redes sociais</h2>
+## 📋 Organização do Projeto
 
-###
+Durante o desenvolvimento deste sistema, utilizei um **quadro no Trello** para planejar, acompanhar e documentar cada etapa.  
+Isso ajudou a manter o foco, garantir que todas as entregas fossem concluídas e facilitar revisões.
 
-<a href="https://github.com/joao-victor-fonseca" target="_blank">
-  <img src="https://skillicons.dev/icons?i=github&theme=dark" width="52" height="40" alt="GitHub" />
-</a>
-<a href="https://www.linkedin.com/in/jo%C3%A3o-victor-fonseca-assis-b17516207/" target="_blank">
-  <img src="https://skillicons.dev/icons?i=linkedin&theme=dark" width="52" height="40" alt="LinkedIn" />
-</a>
-<a href="mailto:joaovictorfosecaassis@gmail.com" target="_blank">
-  <img src="https://skillicons.dev/icons?i=gmail&theme=dark" width="52" height="40" alt="Gmail" />
-</a>
+### Estrutura de Etapas
 
-###
+- 🟦 **Etapa 1 – Setup Inicial**  
+  Configuração do mono-repo, backend, frontend e estrutura de pastas.
 
-## Sobre o Projeto
+- 🟩 **Etapa 2 – Modelagem de Dados e Banco**  
+  Definição das entidades, configuração do Prisma, migrations e dados iniciais.
 
-Este sistema simula um ambiente para gerenciamento de entregas por drones, incluindo:  
-- Cadastro de pedidos com localização, peso e prioridade  
-- Alocação inteligente de pacotes para drones respeitando capacidade e alcance  
-- Simulação dos estados dos drones (Idle, Carregando, Em voo, etc.)  
-- Dashboard com métricas básicas e status  
+- 🟨 **Etapa 3 – Lógica Principal do Backend**  
+  Endpoints principais, lógica de alocação de drones, simulação de voo e bateria.
+
+- 🟧 **Etapa 4 – Frontend**  
+  Interfaces para pedidos, entregas, dashboard, status em tempo real e integração com backend.
+
+- 🟥 **Etapa 5 – Testes e Simulação**  
+  Testes unitários, de carga e validações.
+
+- 🟪 **Etapa 6 – Finalização e Deploy**  
+  Deploy backend e frontend, documentação e extras.
+
+<p align="center">
+  <img src="./docs/trello-preview.png" alt="Quadro no Trello" width="700"/>
+</p>
+
+🔗 **Quadro no Trello**: [Acessar aqui](https://trello.com/b/3C1t3vv8/projeto-drone)
+
+---
+
+## 📜 Sobre o Projeto
+
+Este sistema simula um ambiente para gerenciamento de entregas por drones, incluindo:
+
+- Cadastro de pedidos com localização, peso e prioridade
+- Alocação inteligente de pacotes para drones respeitando capacidade e alcance
+- Simulação dos estados dos drones (Idle, Carregando, Em voo, etc.)
+- Dashboard com métricas básicas e status
 - Testes automatizados para regras principais
 
 ---
 
-## Como Rodar
+## 🚀 Como Rodar
+
+### 1️⃣ Clonar o repositório
+
+```bash
+git clone https://github.com/joao-victor-fonseca/drone-delivery.git
+cd drone-delivery
+```
 
 ### Backend
 
 ```bash
 cd backend
 npm install
-cp .env.example .env
-# editar .env com DATABASE_URL e PORT
 npx prisma migrate deploy
 npm run dev
 ```
-
 
 ### Frontend
 
