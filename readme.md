@@ -43,10 +43,6 @@ Isso ajudou a manter o foco, garantir que todas as entregas fossem concluídas e
 - 🟪 **Etapa 6 – Finalização e Deploy**  
   Deploy backend e frontend, documentação e extras.
 
-<p align="center">
-  <img src="./docs/trello-preview.png" alt="Quadro no Trello" width="700"/>
-</p>
-
 🔗 **Quadro no Trello**: [Acessar aqui](https://trello.com/b/3C1t3vv8/projeto-drone)
 
 ---
